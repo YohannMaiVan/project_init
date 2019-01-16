@@ -6,7 +6,7 @@
 #    By: agrumbac <agrumbac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/04 17:49:26 by agrumbac          #+#    #+#              #
-#    Updated: 2018/11/25 19:10:17 by agrumbac         ###   ########.fr        #
+#    Updated: 2019/01/16 20:50:52 by yomai-va         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,10 +54,11 @@ printf "                         ^ \n"$X
 if [ -z ${@} ]; then
 	printf $G"Project name: \e[0m"
 	read name
-	upper_case_name=`echo $name | awk '{print toupper($0)}'`
 else
 	name=$@
 fi
+
+upper_case_name=`echo $name | awk '{print toupper($0)}'`
 
 # Project structure
 printf $B"["$G"OK"$B"] Generating "$Y"srcs"$B" and "$Y"includes"$B" folders\n"$X
